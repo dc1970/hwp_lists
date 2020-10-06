@@ -22,4 +22,9 @@ for k in new_hwp_dict.keys():
         if old_hwp_dict[k] != new_hwp_dict[k]:
             diff_hwp_dict[k] = [' '.join(old_hwp_dict[k]), ' '.join(new_hwp_dict[k])]
 
-print("done")
+sorted_keys = list(diff_hwp_dict.keys())
+sorted_keys.sort()
+for k in sorted_keys:
+    print(k + ', ' + ', '.join(diff_hwp_dict[k]))
+
+
